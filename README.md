@@ -4,10 +4,10 @@
 
 ## Objectives
 
-- DOM Manipulation
-- Events and Event Handlers
-- Callbacks
-- Constructors and Prototypes or ES6 Classes (optional)
+- [ ] DOM Manipulation
+- [ ] Events and Event Handlers
+- [ ] Callbacks
+- [ ] Constructors and Prototypes or ES6 Classes (optional)
 
 ---
 
@@ -21,11 +21,11 @@ search.
 
 ## Instructions
 
-- We're building out a search feature in our application (no backend persistence).
+- [ ] We're building out a search feature in our application (no backend persistence).
 
-- A user should be able to search for a Pokemon and flip that Pokemon card to see its alternate sprite.
+- [ ] A user should be able to search for a Pokemon and flip that Pokemon card to see its alternate sprite.
 
-- Two files containing the same information are included: `db.json` and `pokemon.js`. If you've learned `fetch`,
+- [ ] Two files containing the same information are included: `db.json` and `pokemon.js`. If you've learned `fetch`,
   consider using `json-server` to spin up a simple RESTful API that will give you your pokemon data:
   - `$ npm install -g json-server`
   - `$ json-server --watch db.json`
@@ -36,10 +36,10 @@ search.
 
 ### Deliverables:
 
-1.  Implement a filter functionality for your Pokemon list.
-1.  Implement a flip functionality on each Pokemon.
-1.  Your search should include pokemon whose names are **not** exact matches
-1.  AS A BONUS, add a way to show users details for a particular pokemon: moves, abilities, etc.
+- [ ]  Implement a filter functionality for your Pokemon list.
+- [ ]  Implement a flip functionality on each Pokemon.
+- [ ]  Your search should include pokemon whose names are **not** exact matches
+- [ ]  AS A BONUS, add a way to show users details for a particular pokemon: moves, abilities, etc.
 
 ---
 
