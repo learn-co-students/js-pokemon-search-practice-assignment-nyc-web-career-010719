@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', () => {
     generateAllPokemons(pokemon_list);
   })
 
+  pokeContainer.addEventListener('click', function (cards) {
+    if (cards.target.dataset.action === 'flip') {
+      const pokemon = POKEMON.find(function(pokemon) {
+        return pokemon.id == cards.target.dataset.id
+      })
+      if (cards.target.src === pokemon.sprites.front) {
+        cards.target.src = pokemon.sprites.back
+      } else {
+        cards.target.src = pokemon.sprites.front
+      }
+    }
+  })
+
   function generateAllPokemons(pokemon_list) {
     for (const pokemon of pokemon_list) {
       let div1 = document.createElement('div');
@@ -32,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       img.setAttribute('class','toggle-sprite');
       img.setAttribute('data-id',`${pokemon.id}`);
       img.setAttribute('data-action','flip');
-      img.src = pokemon.sprites["front"];
+      img.src = pokemon.sprites.front;
       h1.appendChild(pokeName)
       div3.appendChild(img);
       div2.appendChild(h1);
