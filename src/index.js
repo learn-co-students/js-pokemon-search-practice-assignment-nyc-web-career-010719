@@ -1,11 +1,15 @@
+//event listener that ensures that HTML is loaded before the JS loads
 document.addEventListener('DOMContentLoaded', () => {
   const pokemonContainer = document.querySelector('#pokemon-container')
 
+  //call function to render all pokemons to page (function exists outside of this event listener)
   renderAllPokemon(POKEMON)
 
+  //add event listener to input bar so when you type, pokemons filter accordingly
   let input = document.querySelector('#pokemon-search-input')
   input.addEventListener('input', filterPokemon)
 
+  //add event listener to click on the card and change the image
   pokemonContainer.addEventListener('click', function(e){
     const pokemon = POKEMON.find(p => p.id == e.target.dataset.id)
     if (e.target.src === pokemon.sprites.front) {
@@ -16,12 +20,14 @@ document.addEventListener('DOMContentLoaded', () => {
   })
 })
 
+//render many pokemons to the page
 function renderAllPokemon(pokemons){
   const pokemonContainer = document.querySelector("#pokemon-container");
   pokemonContainer.innerHTML = "";
   pokemons.forEach(renderSinglePokemon);
 }
 
+//render a single pokemon to the page
 function renderSinglePokemon(pokemon){
   const pokemonContainer = document.querySelector("#pokemon-container");
   pokemonContainer.innerHTML += `<div class="pokemon-card">
@@ -38,6 +44,7 @@ function renderSinglePokemon(pokemon){
    </div>`;
 }
 
+//filter the POKEMON array
 function filterPokemon(e){
   const filteredPokes = POKEMON.filter(function(poke){
     return poke.name.includes(e.target.value);
